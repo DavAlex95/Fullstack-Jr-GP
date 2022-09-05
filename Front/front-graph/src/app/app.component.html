@@ -1,0 +1,46 @@
+<div class="wrapper">
+<div class="container">
+  <div class="data">
+      <h1>Temperatura</h1>
+      <h2>Ultimo Valor</h2>
+      <h1>{{temp}}</h1>
+      <div>{{fecha}}</div>
+  </div>
+  <div class="grafica">
+    <div class="arriba">
+      Tiempo mostrado
+      <select #_hum (change)="onSelectedTemp(_hum.value)">
+        <option default>Tiempo Real</option>
+        <option>15 min</option>
+        <option>30 min</option>
+        <option>60 min</option>
+      </select>
+  </div>
+  <div class="abajo">
+    <canvas #canvas width="400" height="120"></canvas></div>
+  </div>
+  
+</div>
+<div class="container">
+  <div class="data">
+      <h1>Humedad</h1>
+      <h2>Ultimo Valor</h2>
+      <h1>{{hum}}</h1>
+      <div>{{fecha}}</div>
+  </div>
+  <div class="grafica">
+    <div class="arriba">
+      Tiempo mostrado
+      <select #_temp (change)="onSelectedHum(_temp.value)">
+        <option default>Tiempo Real</option>
+        <option>15 min</option>
+        <option>30 min</option>
+        <option>60 min</option>
+      </select>
+  </div>
+
+    <div class="abajo"><canvas #canvasDos width="400" height="120"></canvas></div>
+  
+  </div>
+</div>
+</div>
